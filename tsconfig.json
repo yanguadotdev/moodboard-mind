@@ -21,6 +21,7 @@
     "paths": {
       "@/*": ["./*"],
       "@spb/*": ["./utils/supabase/*"],
+      "@utils/*": ["./utils/*"],
     },
   },
   "include": [

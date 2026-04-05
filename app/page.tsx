@@ -1,18 +1,6 @@
-"use client";
-import { createClient } from "@spb/client";
-import { getURL } from "@helpers";
+import Link from "next/link";
 
 export default function LandingPage() {
-  const handleLogin = async () => {
-    const supabase = createClient();
-    await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: {
-        redirectTo: `${getURL()}/auth/callback`,
-      },
-    });
-  };
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white p-4">
       <div className="max-w-2xl text-center space-y-8">
@@ -24,12 +12,12 @@ export default function LandingPage() {
           caos.
         </p>
 
-        <button
-          onClick={handleLogin}
+        <Link
+          href="auth/login"
           className="px-8 py-4 bg-white text-black font-mono font-bold rounded-full hover:bg-zinc-200 transition-all transform hover:scale-105"
         >
-          Entrar con Google
-        </button>
+          Empezar ahora
+        </Link>
       </div>
     </main>
   );

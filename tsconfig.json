@@ -20,8 +20,10 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@spb/*": ["./utils/supabase/*"],
-      "@utils/*": ["./utils/*"],
+      "@spb/*": ["./lib/supabase/*"],
+      "@utils": ["./lib/utils"],
+      "@helpers": ["./lib/helpers"],
+      "@shadcn/*": ["./components/ui/*"],
     },
   },
   "include": [

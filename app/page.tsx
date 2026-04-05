@@ -1,6 +1,6 @@
 "use client";
 import { createClient } from "@spb/client";
-import { getURL } from "@utils/helpers";
+import { getURL } from "@helpers";
 
 export default function LandingPage() {
   const handleLogin = async () => {

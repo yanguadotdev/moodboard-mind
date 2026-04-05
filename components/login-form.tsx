@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { cn } from "@utils/helpers";
-import { getURL } from "@/utils/helpers";
+import { cn } from "@utils";
+import { getURL } from "@helpers";
 import { createClient } from "@spb/client";
-import { Button } from "@/components/ui/button";
+import { Button } from "@shadcn/button";
 import {
   Card,
   CardContent,
@@ -12,9 +12,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
-// Importamos un icono de Google (puedes usar lucide-react o uno de react-icons)
-import { Chrome } from "lucide-react";
 
 export function LoginForm({
   className,
@@ -33,8 +30,6 @@ export function LoginForm({
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          // Usamos tu función getURL para que funcione en Local y Vercel
-          // Agregamos el query param 'next' para que el callback sepa a dónde ir
           redirectTo: `${getURL()}/auth/callback?next=/dashboard`,
           queryParams: {
             access_type: "offline",
@@ -80,14 +75,7 @@ export function LoginForm({
                 className="w-full py-6 font-mono text-lg border-zinc-800 hover:bg-white hover:text-black transition-all"
                 disabled={isLoading}
               >
-                {isLoading ? (
-                  "Conectando..."
-                ) : (
-                  <>
-                    <Chrome className="mr-2 h-5 w-5" />
-                    Continuar con Google
-                  </>
-                )}
+                {isLoading ? "Conectando..." : <>Continuar con Google</>}
               </Button>
             </div>
           </form>

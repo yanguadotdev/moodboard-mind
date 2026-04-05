@@ -23,6 +23,7 @@
       "@spb/*": ["./lib/supabase/*"],
       "@utils": ["./lib/utils"],
       "@helpers": ["./lib/helpers"],
+      "@comp/*": ["./components/*"],
       "@shadcn/*": ["./components/ui/*"],
     },
   },

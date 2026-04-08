@@ -1,4 +1,6 @@
+import { Suspense } from "react";
 import { LogoutButton } from "@comp/logout-button";
+import { WelcomeName, WelcomeFallback } from "@comp/welcome-name";
 
 export default function DashboardPage() {
   return (
@@ -17,10 +19,13 @@ export default function DashboardPage() {
       <main className="max-w-5xl mx-auto space-y-12">
         <section>
           <h2 className="text-4xl tracking-tight mb-2 font-bold">
-            Bienvenido a{" "}
-            <span className="text-primary trid-effect ml-2 relative bottom-1.5 inline-block">
+            <span className="opacity-60">Bienvenido a</span>{" "}
+            <span className="text-primary trid-effect ml-2 relative bottom-1 inline-block">
               Mymind
             </span>
+            <Suspense fallback={<WelcomeFallback />}>
+              <WelcomeName />
+            </Suspense>
           </h2>
           <p className="text-zinc-500 font-mono text-sm">
             Tu infraestructura de autenticación y storage está lista.

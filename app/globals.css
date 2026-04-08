@@ -4,6 +4,24 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@layer components {
+  .trid-effect {
+    text-shadow:
+      -1px 0 #a32900,
+      0 1px #a32900,
+      1px 0 #a32900,
+      0 -1px #a32900,
+      -8px 8px #a32900,
+      -7px 7px #a32900,
+      -6px 6px #a32900,
+      -5px 5px #a32900,
+      -4px 4px #a32900,
+      -3px 3px #a32900,
+      -2px 2px #a32900,
+      -1px 1px #a32900;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -55,7 +73,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.553 0.195 38.402);
+  --primary: oklch(68.15% 0.211 36.77);
   --primary-foreground: oklch(0.98 0.016 73.684);
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
@@ -90,7 +108,7 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.47 0.157 37.304);
+  --primary: oklch(68.15% 0.211 36.77);
   --primary-foreground: oklch(0.98 0.016 73.684);
   --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);

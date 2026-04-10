@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { LogoutButton } from "@comp/logout-button";
 import { WelcomeName, WelcomeFallback } from "@comp/welcome-name";
+import { Roadmap } from "@comp/roadmap";
 
 export default function DashboardPage() {
   return (
@@ -31,21 +32,9 @@ export default function DashboardPage() {
             Tu infraestructura de autenticación y storage está lista.
           </p>
         </section>
-
-        {/* Grid de ejemplo para visualizar el espacio */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {[1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="aspect-video bg-zinc-900/30 border border-zinc-800 rounded-2xl flex flex-col items-center justify-center group hover:border-zinc-600 transition-all duration-500"
-            >
-              <span className="text-zinc-700 group-hover:text-zinc-400 font-mono text-[10px] uppercase tracking-widest transition-colors">
-                Ready for images
-              </span>
-            </div>
-          ))}
-        </div>
       </main>
+
+      <Roadmap />
 
       {/* Footer minimalista */}
       <footer className="fixed bottom-8 left-8">

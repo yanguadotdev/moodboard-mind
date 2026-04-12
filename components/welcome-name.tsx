@@ -8,6 +8,6 @@ export async function WelcomeName() {
 
 export function WelcomeFallback() {
   return (
-    <span className="ml-2 w-28 h-10 bg-zinc-800 animate-pulse rounded-md inline-block align-middle" />
+    <span className="ml-2 text-base w-28 h-6 bg-zinc-800 animate-pulse rounded-md inline-block align-middle" />
   );
 }

@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
-import { MindStoreProvider } from "@/providers/mind-store-provider";
+import type { Metadata } from 'next';
+import { MindStoreProvider } from '@/providers/mind-store-provider';
 
 export const metadata: Metadata = {
-  title: "Dashboard",
-  description: "Gestiona tus ideas y referencias visuales",
+  title: 'Dashboard',
+  description: 'Gestiona tus ideas y referencias visuales'
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {

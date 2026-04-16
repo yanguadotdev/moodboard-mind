@@ -1,9 +1,9 @@
-import { createStore } from "zustand/vanilla";
-import type { MindStore, MindState } from "@typings/mind";
+import type { MindState, MindStore } from '@typings/mind';
+import { createStore } from 'zustand/vanilla';
 
 const defaultInitState: MindState = {
   items: [],
-  searchQuery: "",
+  searchQuery: ''
 };
 
 export const createMindStore = (initState: MindState = defaultInitState) => {
@@ -12,8 +12,8 @@ export const createMindStore = (initState: MindState = defaultInitState) => {
     addItem: (item) => set((state) => ({ items: [item, ...state.items] })),
     removeItem: (id) =>
       set((state) => ({
-        items: state.items.filter((i) => i.id !== id),
+        items: state.items.filter((i) => i.id !== id)
       })),
-    setSearch: (query) => set({ searchQuery: query }),
+    setSearch: (query) => set({ searchQuery: query })
   }));
 };

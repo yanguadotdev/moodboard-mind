@@ -1,6 +1,6 @@
 export interface MindItem {
   id: string;
-  type: "image" | "text" | "link" | "color";
+  type: 'image' | 'text' | 'link' | 'color';
   content: string;
   tags: string[];
   color?: string;

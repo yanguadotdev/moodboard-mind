@@ -1,15 +1,13 @@
-"use client";
+'use client';
 
-import { type ReactNode, createContext, useState, useContext } from "react";
-import { useStore } from "zustand";
-import type { MindStore } from "@typings/mind";
-import { createMindStore } from "@/stores/mind-store";
+import type { MindStore } from '@typings/mind';
+import { createContext, type ReactNode, useContext, useState } from 'react';
+import { useStore } from 'zustand';
+import { createMindStore } from '@/stores/mind-store';
 
 export type MindStoreApi = ReturnType<typeof createMindStore>;
 
-export const MindStoreContext = createContext<MindStoreApi | undefined>(
-  undefined,
-);
+export const MindStoreContext = createContext<MindStoreApi | undefined>(undefined);
 
 interface MindStoreProviderProps {
   children: ReactNode;
@@ -25,7 +23,7 @@ export const useMindStore = <T,>(selector: (store: MindStore) => T): T => {
   const context = useContext(MindStoreContext);
 
   if (!context) {
-    throw new Error("useMindStore should be used within MindStoreProvider");
+    throw new Error('useMindStore should be used within MindStoreProvider');
   }
   return useStore(context, selector);
 };

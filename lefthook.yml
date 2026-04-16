@@ -1,0 +1,6 @@
+pre-commit:
+  parallel: true
+  commands:
+    pre-commit-script:
+      run: "pnpm run pre-commit"
+      stage_fixed: true

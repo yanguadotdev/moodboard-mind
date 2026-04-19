@@ -1,8 +1,8 @@
 'use client';
 
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@shadcn/accordion';
-import { Badge } from '@shadcn/badge';
-import { Checkbox } from '@shadcn/checkbox';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@ui/accordion';
+import { Badge } from '@ui/badge';
+import { Checkbox } from '@ui/checkbox';
 import { useState } from 'react';
 
 const INITIAL_TASKS = [

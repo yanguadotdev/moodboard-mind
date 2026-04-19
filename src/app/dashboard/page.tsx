@@ -1,6 +1,6 @@
-import { LogoutButton } from '@comp/logout-button';
-import { Roadmap } from '@comp/roadmap';
-import { WelcomeFallback, WelcomeName } from '@comp/welcome-name';
+import { LogoutButton } from '@auth/components/logout-button';
+import { Roadmap } from '@modules/brain/components/roadmap';
+import { WelcomeFallback, WelcomeName } from '@modules/brain/components/welcome-name';
 import { Suspense } from 'react';
 
 export default function DashboardPage() {

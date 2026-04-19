@@ -1,11 +1,11 @@
 'use client';
 
 import { getURL } from '@helpers';
-import { Button } from '@shadcn/button';
 import { createClient } from '@spb/client';
+import { Button } from '@ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@ui/card';
 import { cn } from '@utils';
 import { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRef<'div'>) {
   const [error, setError] = useState<string | null>(null);

@@ -2,14 +2,7 @@
   "$schema": "https://biomejs.dev/schemas/2.4.12/schema.json",
   "files": {
     "ignoreUnknown": true,
-    "includes": [
-      "**/*.css",
-      "**/*.ts",
-      "**/*.tsx",
-      "**/*.js",
-      "**/*.jsx",
-      "*.*"
-    ]
+    "includes": ["**/*.css", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "*.*"]
   },
   "formatter": {
     "attributePosition": "auto",
@@ -89,7 +82,7 @@
       "style": {
         "noImplicitBoolean": "error",
         "noNamespace": "error",
-        "noNonNullAssertion": "info",
+        "noNonNullAssertion": "off",
         "useBlockStatements": "off",
         "useConsistentArrayType": {
           "level": "error",
@@ -145,6 +138,21 @@
         "noUnsafeNegation": "error",
         "useDefaultSwitchClauseLast": "error"
       }
+    }
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "css": {
+    "formatter": {
+      "enabled": true
+    },
+    "parser": {
+      "tailwindDirectives": true
     }
   }
 }

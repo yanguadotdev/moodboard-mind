@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 
@@ -12,6 +12,12 @@ const geistMono = Geist_Mono({
   subsets: ['latin']
 });
 
+export const viewport: Viewport = {
+  themeColor: '#000000',
+  width: 'device-width',
+  initialScale: 1
+};
+
 export const metadata: Metadata = {
   title: {
     default: 'Mymind — Tu segundo cerebro visual',
@@ -19,8 +25,7 @@ export const metadata: Metadata = {
   },
   description: 'Organiza tus referencias visuales e ideas de forma minimalista y rápida.',
   keywords: ['SaaS', 'Design', 'Moodboard', 'Productivity'],
-  authors: [{ name: 'Samir Yangua' }, { name: 'Gael Segura' }],
-  themeColor: '#000000'
+  authors: [{ name: 'Samir Yangua' }, { name: 'Gael Segura' }]
 };
 
 export default function RootLayout({

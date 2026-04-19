@@ -2,8 +2,8 @@
 
 import { Logout } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
-import { Button } from '@shadcn/button';
 import { createClient } from '@spb/client';
+import { Button } from '@ui/button';
 import { useRouter } from 'next/navigation';
 
 export function LogoutButton() {

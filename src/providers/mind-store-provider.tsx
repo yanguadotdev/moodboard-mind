@@ -1,9 +1,9 @@
 'use client';
 
+import { createMindStore } from '@modules/brain/store/mind-store';
 import type { MindStore } from '@typings/mind';
 import { createContext, type ReactNode, useContext, useState } from 'react';
 import { useStore } from 'zustand';
-import { createMindStore } from '@/stores/mind-store';
 
 export type MindStoreApi = ReturnType<typeof createMindStore>;
 

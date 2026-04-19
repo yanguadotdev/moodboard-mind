@@ -11,14 +11,14 @@
     "prefix": ""
   },
   "iconLibrary": "hugeicons",
-  "rtl": false,
   "aliases": {
     "components": "@/components",
-    "utils": "@/lib/utils",
-    "ui": "@/components/ui",
-    "lib": "@/lib",
-    "hooks": "@/hooks"
+    "utils": "@utils",
+    "ui": "@ui",
+    "hooks": "@/hooks",
+    "lib": "@/lib"
   },
+  "rtl": false,
   "menuColor": "inverted-translucent",
   "menuAccent": "subtle",
   "registries": {}

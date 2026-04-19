@@ -20,7 +20,7 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
+      "@/*": ["./src/*"],
       "@spb/*": ["./src/lib/supabase/*"],
       "@utils": ["./src/lib/utils"],
       "@modules/*": ["./src/modules/*"],

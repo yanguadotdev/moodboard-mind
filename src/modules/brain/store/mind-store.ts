@@ -1,5 +1,5 @@
+import type { MindState, MindStore } from '@typings/mind';
 import { createStore } from 'zustand/vanilla';
-import type { MindState, MindStore } from '@/src/types/mind';
 
 const defaultInitState: MindState = {
   items: [],

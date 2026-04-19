@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { MindStoreProvider } from '@/src/providers/mind-store-provider';
+import { MindStoreProvider } from '@/providers/mind-store-provider';
 
 export const metadata: Metadata = {
   title: 'Dashboard',

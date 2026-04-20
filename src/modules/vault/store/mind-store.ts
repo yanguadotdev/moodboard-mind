@@ -1,10 +1,10 @@
-import type { MindState, MindStore } from '@typings/mind';
-import { createStore } from 'zustand/vanilla';
+import { createStore } from 'zustand/vanilla'
+import type { MindState, MindStore } from '../types'
 
 const defaultInitState: MindState = {
   items: [],
   searchQuery: ''
-};
+}
 
 export const createMindStore = (initState: MindState = defaultInitState) => {
   return createStore<MindStore>()((set) => ({
@@ -15,5 +15,5 @@ export const createMindStore = (initState: MindState = defaultInitState) => {
         items: state.items.filter((i) => i.id !== id)
       })),
     setSearch: (query) => set({ searchQuery: query })
-  }));
-};
+  }))
+}

@@ -27,6 +27,8 @@
       "@helpers": ["./src/lib/helpers"],
       "@ui/*": ["./src/components/ui/*"],
       "@auth/*": ["./src/modules/auth/*"],
+      "@vault/*": ["./src/modules/vault/*"],
+      "@spaces/*": ["./src/modules/spaces/*"],
       "@typings/*": ["./src/types/*"]
     }
   },

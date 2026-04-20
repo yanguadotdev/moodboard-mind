@@ -1,7 +1,7 @@
 'use client';
 
-import { createMindStore } from '@modules/brain/store/mind-store';
 import type { MindStore } from '@typings/mind';
+import { createMindStore } from '@vault/store/mind-store';
 import { createContext, type ReactNode, useContext, useState } from 'react';
 import { useStore } from 'zustand';
 

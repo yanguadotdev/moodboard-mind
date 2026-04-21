@@ -1,13 +1,13 @@
 import { createStore } from 'zustand/vanilla'
-import type { MindState, MindStore } from '../types'
+import type { VaultState, VaultStore } from '../types'
 
-const defaultInitState: MindState = {
+const defaultInitState: VaultState = {
   items: [],
   searchQuery: ''
 }
 
-export const createMindStore = (initState: MindState = defaultInitState) => {
-  return createStore<MindStore>()((set) => ({
+export const createVaultStore = (initState: VaultState = defaultInitState) => {
+  return createStore<VaultStore>()((set) => ({
     ...initState,
     addItem: (item) => set((state) => ({ items: [item, ...state.items] })),
     removeItem: (id) =>

@@ -1,5 +1,5 @@
 // Business Entity
-export interface MindItem {
+export interface VaultItem {
   id: string
   type: 'image' | 'quote' | 'link' | 'color'
   content: string
@@ -10,15 +10,15 @@ export interface MindItem {
 }
 
 // Store types
-export type MindState = {
-  items: MindItem[]
+export type VaultState = {
+  items: VaultItem[]
   searchQuery: string
 }
 
-export type MindActions = {
-  addItem: (item: MindItem) => void
+export type VaultActions = {
+  addItem: (item: VaultItem) => void
   removeItem: (id: string) => void
   setSearch: (query: string) => void
 }
 
-export type MindStore = MindState & MindActions
+export type VaultStore = VaultState & VaultActions

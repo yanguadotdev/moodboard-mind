@@ -2,10 +2,10 @@
 
 import { createContext, type ReactNode, useContext, useState } from 'react'
 import { useStore } from 'zustand'
-import { createMindStore } from '../store/mind-store'
-import type { MindStore } from '../types'
+import { createVaultStore } from '../store/vault-store'
+import type { VaultStore } from '../types'
 
-export type VaultStoreApi = ReturnType<typeof createMindStore>
+export type VaultStoreApi = ReturnType<typeof createVaultStore>
 
 export const VaultContext = createContext<VaultStoreApi | undefined>(undefined)
 
@@ -15,12 +15,12 @@ interface VaultProviderProps {
 
 export const VaultProvider = ({ children }: VaultProviderProps) => {
   // It's created only once per client lifecycle
-  const [store] = useState(() => createMindStore())
+  const [store] = useState(() => createVaultStore())
 
   return <VaultContext.Provider value={store}>{children}</VaultContext.Provider>
 }
 
-export const useVaultStore = <T,>(selector: (store: MindStore) => T): T => {
+export const useVaultStore = <T,>(selector: (store: VaultStore) => T): T => {
   const context = useContext(VaultContext)
 
   if (!context) {

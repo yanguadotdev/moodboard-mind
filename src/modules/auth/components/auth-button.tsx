@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import { getAuthenticatedUser } from '../services/session'
+import { getAuthContext } from '../services/session'
 
 export async function AuthButton() {
-  const user = await getAuthenticatedUser()
+  const { user } = await getAuthContext()
 
   const config = user
     ? { href: '/dashboard', label: 'Ingresar a mi Vault' }

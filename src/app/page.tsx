@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import { AuthButton, AuthButtonSkeleton } from '@auth/components/auth-button'
+import { Suspense } from 'react'
 
 export default function LandingPage() {
   return (
@@ -11,13 +12,10 @@ export default function LandingPage() {
           Tu jardín privado para ideas, imágenes y colores. Sin carpetas. Sin caos.
         </p>
 
-        <Link
-          href='auth/login'
-          className='px-8 py-4 bg-white text-black font-mono font-bold rounded-full hover:bg-zinc-200 transition-all transform hover:scale-105'
-        >
-          Empezar ahora
-        </Link>
+        <Suspense fallback={<AuthButtonSkeleton />}>
+          <AuthButton />
+        </Suspense>
       </div>
     </main>
-  );
+  )
 }

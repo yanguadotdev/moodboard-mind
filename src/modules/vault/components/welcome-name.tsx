@@ -1,4 +1,4 @@
-import { getUserProfile } from '@auth/services/queries'
+import { getUserProfile } from '@auth/services/session'
 
 export async function WelcomeName() {
   const firstName = await getUserProfile()

@@ -8,6 +8,11 @@ export async function getUserProfile() {
   return profile?.display_name.split(' ')[0] || 'Usuario'
 }
 
+export async function getUserId() {
+  const { user } = await getAuthContext()
+  return user?.id ?? null
+}
+
 export async function getAuthContext() {
   const supabase = await createClient()
   const {

@@ -14,9 +14,11 @@ export async function getAuthContext() {
     data: { user },
     error
   } = await supabase.auth.getUser()
+  const isAuthenticated = !!user && !error
 
   return {
-    user: error ? null : user,
-    supabase
+    user: isAuthenticated ? user : null,
+    supabase,
+    isAuthenticated
   }
 }

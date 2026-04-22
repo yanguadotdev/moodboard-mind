@@ -2,9 +2,9 @@ import Link from 'next/link'
 import { getAuthContext } from '../services/session'
 
 export async function AuthButton() {
-  const { user } = await getAuthContext()
+  const { isAuthenticated } = await getAuthContext()
 
-  const config = user
+  const config = isAuthenticated
     ? { href: '/dashboard', label: 'Ingresar a mi Vault' }
     : { href: '/auth/login', label: 'Join the mind' }
 
